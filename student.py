@@ -14,3 +14,17 @@ class Student:
      def initials (self):
          return f"Hello {self.first_name} {self.last_name} How is {self.country} your initials are {self.first_name[0]} {self.last_name[0]}"
 
+class Account:
+    def __init__(self,account_name,account_number):
+        self.account_name = account_name
+        self.account_number = account_number
+        self.balance = 0
+
+
+    def deposit(self,amount):
+        self.balance+=amount
+        return f"Hello {self.account_name} you have deposited{amount} and your account balance is {self.balance}"
+
+    def withdraw(self,amount):
+        self.balance-=amount
+        return self.balance
